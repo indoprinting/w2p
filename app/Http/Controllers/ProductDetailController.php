@@ -148,9 +148,11 @@ class ProductDetailController extends ProductController
                 "satuan"    => $this->materialPrice($material[5], $material[4], $luas)['satuan'],
             ];
         else :
-            $size       = explode(',,', $post->atb0);
-            $v_name     = $size[1];
-            $ukuran     = $size[2] * $post->qty;
+            $size   = explode(',,', $post->atb0);
+            $v_name = $size[1];
+            // $ukuran = $size[2] * $post->qty;
+            // Fix above with this. 2022-08-26 14:18:00
+            $ukuran = $post->qty;
             return [
                 "jenis_atb" => $size[0],
                 "nama_atb"  => $v_name,
@@ -252,9 +254,9 @@ class ProductDetailController extends ProductController
             $v_name = explode('x', $v_name);
             if (count($v_name) < 2) {
                 echo '<b>app/Http/Controllers/ProductDetailController.php:254: SOMETHING WRONG</b><br>';
-                echo('<pre>');
+                echo ('<pre>');
                 print_r($v_name);
-                echo('</pre>');
+                echo ('</pre>');
                 die;
             }
             $width  = preg_replace('/[^0-9\/_|+.-]/', '', $v_name[0]);
