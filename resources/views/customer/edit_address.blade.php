@@ -87,7 +87,7 @@ endif;
     </form>
 </div>
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL13_MQy0T1mk_1aTkzeZJLNNSNz_QbPg&callback=initAutocomplete&libraries=places" async></script> -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcntkSIsdPm3rk3GHgSaOONtrKvbJFZJI&callback=initAutocomplete&libraries=places" async></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvKlEVsobfTtwcellmNhqyneu2TI0XQMk&callback=initAutocomplete&libraries=places" async></script>
 <script>
     window.lat_php = "<?= $coord[0] ? $coord[0] : -7.065076535253742 ?>";
     window.long_php = "<?= $coord[0] ? $coord[1] : 110.42755767388537 ?>";
