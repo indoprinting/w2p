@@ -301,4 +301,18 @@ class ProductDetailController extends ProductController
 
         return $images;
     }
+
+    public function designTemplate($id)
+    {
+        $data       = DB::table('idp_custom_design_template')
+            ->join('idp_custom_design_category', 'idp_custom_design_template.template_category', '=', 'idp_custom_design_category.id_category')
+            ->select('idp_custom_design_template.*', 'idp_custom_design_category.category_name')
+            ->where('idp_custom_design_template.template_slug', $id)
+            ->get();
+//        $data       = array_merge($data, [
+//            "title" => $data['template_name']->template_name,
+//        ]);
+
+        return view('template.detail', compact('data'));
+    }
 }

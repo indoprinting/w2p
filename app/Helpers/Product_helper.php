@@ -12,7 +12,7 @@ function adminUrl($path)
 
 function cacheTime()
 {
-    return 60 * 60 * 24;
+    return 60 * 60 * 1; // 1 hour
 }
 
 function rupiah($angka)

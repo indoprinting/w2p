@@ -38,8 +38,10 @@
                     <li>Ukuran File Upload maksimal 20 Mb, lebih dari 20 Mb menggunakan share link.</li>
                     <li>Mohon dicek detail: design, text, ejaan, warna, background, informasi, batas margin.</li>
                     <li>Mohon file yang anda kirim sudah Ready to print, file yang belum siap akan mempengaruhi waktu produksi.</li>
-                    <li>Mohon file yang anda kirim rasio ukurannya sesuai dengan cetakan, misalnya file 1x1 di cetak menjadi 1x1 bukan 1x2</li>
-                    <li>Setiap file yang dicetak akan melalui pengecekan kembali untuk memastikan hasil yang maksimal</li>
+                    <li>Mohon file yang anda kirim rasio ukurannya sesuai dengan cetakan, misalnya file 1x1 dan anda pilih ukuran 2x1 maka akan kita tarik di ukuran 2x1</li>
+                    <li>Setiap file yang dicetak sudah dicek terlebih dahulu sesuai keterangan yang di order</li>
+{{--                    <li>Mohon file yang anda kirim rasio ukurannya sesuai dengan cetakan, misalnya file 1x1 di cetak menjadi 1x1 bukan 1x2</li>--}}
+{{--                    <li>Setiap file yang dicetak akan melalui pengecekan kembali untuk memastikan hasil yang maksimal</li>--}}
                 </ul>
             </div>
 

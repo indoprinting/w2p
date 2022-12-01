@@ -1,69 +1,120 @@
-<div class="cart">
-    @foreach ($carts as $cart)
-        <a href="{{ route('delete.cart', $cart->id) }}" class="text-secondary fad fa-trash-alt" style="font-size:20px" onclick="javascript:return confirm('Delete this item ?')"></a>
-        <div style="display: flex;">
-            <div class="thumbnail">
-                <img src="{{ adminUrl('assets/images/products-img/' . $cart->thumbnail) }}" alt="">
+<?php
+$url =$_SERVER['REQUEST_URI'];
+$result = parse_url($url, PHP_URL_QUERY);
+?>
+@if($result != null)
+    <div class="cart">
+            <a href="..." class="text-secondary fad fa-trash-alt" style="font-size:20px" onclick="javascript:return confirm('Delete this item ?')"></a>
+            <div style="display: flex;">
+                <div class="thumbnail">
+                    <img id="screenshot" alt="">
+                </div>
+                <div class="cart-content">
+                    <div class="title" id="name"></div>
+                    <div class="atb">Kuantitas : ...</div>
+                    <div class="atb">...</div>
+                    <div class="atb">Note : ... <a href="javascript:;" class="update-note text-danger" data-note="..."><i class="far fa-edit"></i> Ubah</a></div>
+                    <form class="form-note" id="note..." action="..." method="POST">
+                        @csrf
+                        <input type="hidden" name="id" value="...">
+                        <x-summernote class="form-control textarea" name="note" rows="2">...</x-summernote>
+                        <div class="text-center">
+                            <button class="btn btn-primary" type="submit">save</button>
+                        </div>
+                    </form>
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#desainModal...">Lihat desain</a>
+                    <!-- </div> -->
+                    <div class="price mb-2">Harga <span class="float-right">..</span></div>
+                </div>
             </div>
-            <div class="cart-content">
-                <div class="title">{{ $cart->name }}</div>
-                <div class="atb">Kuantitas : {{ $cart->qty }}</div>
-                @foreach (json_decode($cart->attributes)->jenis_atb as $id => $atribut)
-                    <div class="atb">{{ $atribut }} : {{ json_decode($cart->attributes)->nama_atb[$id] }}</div>
-                @endforeach
-                <div class="atb">Note : {!! $cart->product_note !!} <a href="javascript:;" class="update-note text-danger" data-note="{{ $cart->id }}"><i class="far fa-edit"></i> Ubah</a></div>
-                <form class="form-note" id="note{{ $cart->id }}" action="{{ route('update.note') }}" method="POST">
-                    @csrf
-                    <input type="hidden" name="id" value="{{ $cart->id }}">
-                    <x-summernote class="form-control textarea" name="note" rows="2">{{ $cart->product_note }}</x-summernote>
-                    <div class="text-center">
-                        <button class="btn btn-primary" type="submit">save</button>
-                    </div>
-                </form>
-                @if ($cart->design)
-                    <a href="javascript:void(0);" data-toggle="modal" data-target="#desainModal{{ $cart->id }}">Lihat desain</a>
-                @elseif($cart->id_category == 17)
-                    <div style="margin-top: 20px;"></div>
-                @else
-                    <div class="atb">Link Design : <a href="//{!! $cart->link !!}" target="_blank">{{ $cart->link }}</a></div>
-                @endif
-                <!-- </div> -->
-                <div class="price mb-2">Harga <span class="float-right">{{ rupiah($cart->price) }}</span></div>
-            </div>
-        </div>
-        <div class="footer"></div>
-        <!-- modal desain -->
-        <div class="modal fade" id="desainModal{{ $cart->id }}" tabindex="-1" role="dialog" aria-labelledby="desainModalTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered mw-100" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="desainModalTitle"><b>Desain produkku</b></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <i class="far fa-times-square"></i>
-                        </button>
-                    </div>
-                    <div class="modal-body detail-desain">
-                        @if ($cart->design)
-                            @foreach (json_decode($cart->design) as $design)
-                                <p>Design {{ $loop->iteration }}</p>
-                                @php $ext = strtolower(pathinfo($design)['extension']) @endphp
-                                @if ($ext == 'png' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'tif')
-                                    <img src="{{ url('assets/images/design-upload/' . $design) }}" alt="" class="img-desain d-block">
-                                @elseif($ext == 'pdf')
-                                    <img src="{{ url('assets/images/logo/pdf.png') }}" alt="" class="img-desain d-block">
-                                @elseif($ext == '7z' || $ext == 'zip' || $ext == 'rar')
-                                    <img src="{{ url('assets/images/logo/logo_rar.png') }}" alt="" class="img-desain d-block">
-                                @endif
-                            @endforeach
-                        @else
-                            No Design
-                        @endif
+            <div class="footer"></div>
+            <!-- modal desain -->
+            <div class="modal fade" id="desainModal" tabindex="-1" role="dialog" aria-labelledby="desainModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered mw-100" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="desainModalTitle"><b>Desain produkku</b></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="far fa-times-square"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body detail-desain">
+                            <p>Design </p>
+                            <img src="" alt="" class="img-desain d-block">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    @endforeach
-</div>
+    </div>
+@else
+    <div class="cart">
+        @foreach ($carts as $cart)
+            <a href="{{ route('delete.cart', $cart->id) }}" class="text-secondary fad fa-trash-alt" style="font-size:20px" onclick="javascript:return confirm('Delete this item ?')"></a>
+            <div style="display: flex;">
+                <div class="thumbnail">
+                    <img src="{{ adminUrl('assets/images/products-img/' . $cart->thumbnail) }}" alt="">
+                </div>
+                <div class="cart-content">
+                    <div class="title">{{ $cart->name }}</div>
+                    <div class="atb">Kuantitas : {{ $cart->qty }}</div>
+                    @foreach (json_decode($cart->attributes)->jenis_atb as $id => $atribut)
+                        <div class="atb">{{ $atribut }} : {{ json_decode($cart->attributes)->nama_atb[$id] }}</div>
+                    @endforeach
+                    <div class="atb">Note : {!! $cart->product_note !!} <a href="javascript:;" class="update-note text-danger" data-note="{{ $cart->id }}"><i class="far fa-edit"></i> Ubah</a></div>
+                    <form class="form-note" id="note{{ $cart->id }}" action="{{ route('update.note') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $cart->id }}">
+                        <x-summernote class="form-control textarea" name="note" rows="2">{{ $cart->product_note }}</x-summernote>
+                        <div class="text-center">
+                            <button class="btn btn-primary" type="submit">save</button>
+                        </div>
+                    </form>
+                    @if ($cart->design)
+                        <a href="javascript:void(0);" data-toggle="modal" data-target="#desainModal{{ $cart->id }}">Lihat desain</a>
+                    @elseif($cart->id_category == 17)
+                        <div style="margin-top: 20px;"></div>
+                    @else
+                        <div class="atb">Link Design : <a href="//{!! $cart->link !!}" target="_blank">{{ $cart->link }}</a></div>
+                    @endif
+                    <!-- </div> -->
+                    <div class="price mb-2">Harga <span class="float-right">{{ rupiah($cart->price) }}</span></div>
+                </div>
+            </div>
+            <div class="footer"></div>
+            <!-- modal desain -->
+            <div class="modal fade" id="desainModal{{ $cart->id }}" tabindex="-1" role="dialog" aria-labelledby="desainModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered mw-100" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="desainModalTitle"><b>Desain produkku</b></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="far fa-times-square"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body detail-desain">
+                            @if ($cart->design)
+                                @foreach (json_decode($cart->design) as $design)
+                                    <p>Design {{ $loop->iteration }}</p>
+                                    @php $ext = strtolower(pathinfo($design)['extension']) @endphp
+                                    @if ($ext == 'png' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'tif')
+                                        <img src="{{ url('assets/images/design-upload/' . $design) }}" alt="" class="img-desain d-block">
+                                    @elseif($ext == 'pdf')
+                                        <img src="{{ url('assets/images/logo/pdf.png') }}" alt="" class="img-desain d-block">
+                                    @elseif($ext == '7z' || $ext == 'zip' || $ext == 'rar')
+                                        <img src="{{ url('assets/images/logo/logo_rar.png') }}" alt="" class="img-desain d-block">
+                                    @endif
+                                @endforeach
+                            @else
+                                No Design
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+@endif
+
 <script>
     $(document).ready(function() {
         $(".form-note").hide();
@@ -80,4 +131,7 @@
             data = data.replace(new RegExp('<p><br></p>$'), '')
         }
     });
+    const obj  = JSON.parse(localStorage.getItem('LUMISE-CART-DATA'));
+    document.getElementById("name").innerHTML = obj.LAHTD547['name'];
+    document.getElementById("screenshot").src = obj.LAHTD547['screenshot'];
 </script>

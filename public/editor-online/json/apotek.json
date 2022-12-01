@@ -1,0 +1,166 @@
+[
+  {
+    "category": "Template Banner Apotek",
+    "products": [
+      [
+        {
+          "title": "Front",
+          "thumbnail": "https://indoprinting.co.id/editor-online/images/banner_apotek/bg.png",
+          "options": {
+            "stageWidth": "800",
+            "stageHeight": "400"
+          },
+          "elements": [
+            {
+              "title": "Banner",
+              "source": "https://indoprinting.co.id/editor-online/images/banner_apotek/bg.png",
+              "type": "image",
+              "parameters": {
+                "left": 400,
+                "top": 300,
+                "originX": "center",
+                "originY": "center",
+                "z": -1,
+                "fill": false,
+                "colors": [
+                  "#b33939"
+                ],
+                "colorLinkGroup": "base",
+                "draggable": 0,
+                "rotatable": 0,
+                "resizable": 0,
+                "removable": 0,
+                "zChangeable": 0,
+                "scaleX": 1,
+                "scaleY": 1,
+                "lockUniScaling": false,
+                "uniScalingUnlockable": 0,
+                "angle": 0,
+                "price": 10,
+                "autoCenter": false,
+                "replaceInAllViews": false,
+                "autoSelect": 0,
+                "topped": 0,
+                "boundingBoxMode": "inside",
+                "opacity": 1,
+                "excludeFromExport": false,
+                "locked": 0,
+                "showInColorSelection": false,
+                "boundingBox": false,
+                "resizeToW": 0,
+                "resizeToH": 0,
+                "filter": null,
+                "scaleMode": "fit",
+                "minScaleLimit": 0.01,
+                "advancedEditing": false,
+                "uploadZone": 0
+              }
+            },
+            {
+              "title": "Design",
+              "source": "https://indoprinting.co.id/editor-online/images/banner_apotek/fn4.png",
+              "type": "image",
+              "parameters": {
+                "left": 410,
+                "top": 190,
+                "originX": "center",
+                "originY": "center",
+                "z": -1,
+                "fill": false,
+                "colors": [
+                  "#000"
+                ],
+                "colorLinkGroup": false,
+                "draggable": 1,
+                "rotatable": 1,
+                "resizable": 1,
+                "removable": 1,
+                "zChangeable": 1,
+                "scaleX": 1.68,
+                "scaleY": 1.68,
+                "lockUniScaling": false,
+                "uniScalingUnlockable": 0,
+                "angle": 0,
+                "price": 0,
+                "autoCenter": false,
+                "replace": "design",
+                "replaceInAllViews": false,
+                "autoSelect": 0,
+                "topped": 0,
+                "boundingBoxMode": "clipping",
+                "opacity": 1,
+                "excludeFromExport": false,
+                "locked": 0,
+                "showInColorSelection": false,
+                "boundingBox": {
+                  "x": 50,
+                  "y": 0,
+                  "width": 700,
+                  "height": 800
+                },
+                "resizeToW": 0,
+                "resizeToH": 0,
+                "filter": null,
+                "scaleMode": "fit",
+                "minScaleLimit": 0.01,
+                "advancedEditing": false,
+                "uploadZone": 0
+              }
+            },
+            {
+              "title": "Text",
+              "source": "https://indoprinting.co.id/editor-online/images/banner_angkringan/fn4.png",
+              "type": "image",
+              "parameters": {
+                "left": 280,
+                "top": 200,
+                "originX": "center",
+                "originY": "center",
+                "z": -1,
+                "fill": false,
+                "colors": [
+                  "#000"
+                ],
+                "colorLinkGroup": false,
+                "draggable": 1,
+                "rotatable": 1,
+                "resizable": 1,
+                "removable": 1,
+                "zChangeable": 1,
+                "scaleX": 1.68,
+                "scaleY": 1.68,
+                "lockUniScaling": false,
+                "uniScalingUnlockable": 0,
+                "angle": 0,
+                "price": 0,
+                "autoCenter": false,
+                "replace": "text",
+                "replaceInAllViews": false,
+                "autoSelect": 0,
+                "topped": 0,
+                "boundingBoxMode": "clipping",
+                "opacity": 1,
+                "excludeFromExport": false,
+                "locked": 0,
+                "showInColorSelection": false,
+                "boundingBox": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 800,
+                  "height": 800
+                },
+                "resizeToW": 0,
+                "resizeToH": 0,
+                "filter": null,
+                "scaleMode": "fit",
+                "minScaleLimit": 0.01,
+                "advancedEditing": false,
+                "uploadZone": 0
+              }
+            }
+          ]
+        }
+      ]
+    ]
+  }
+]

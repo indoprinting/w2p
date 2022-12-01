@@ -112,4 +112,11 @@ class ProfileController extends Controller
         $id = $request->id;
         dd($request->cart_id[$id[0]]);
     }
+
+    public function designStudio()
+    {
+        $title      = "Your Design";
+
+        return view('customer.design_studio', compact('title'));
+    }
 }

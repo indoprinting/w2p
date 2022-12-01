@@ -36,18 +36,25 @@ Route::middleware(['guest'])->group(function () {
 });
 Route::get('logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 
-// BERANDA / HOME 
+// BERANDA / HOME
+Route::get('/test',function(){
+    $data = DB::table('idp_orders')->get();
+    return response()->json($data);
+});
+Route::post('/orders-api', [CheckoutController::class, 'store'])->name('store');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('cara-order', [HomeController::class, 'caraOrder'])->name('cara.order');
 Route::get('price-list', [HomeController::class, 'priceList'])->name('price.list');
 Route::get('price-list/{images}', [HomeController::class, 'downloadPriceList'])->name('download.price.list');
 Route::get('toko-kami', [HomeController::class, 'tokoKami'])->name('toko.kami');
+Route::get('syarat-dan-ketentuan', [HomeController::class, 'term'])->name('term');
 Route::get('privacy-and-security', [HomeController::class, 'privacy'])->name('privacy');
 Route::get('frequently-asked-questions', [HomeController::class, 'faq'])->name('faq');
 Route::get('daftar-rekening-bank', [HomeController::class, 'daftarBank'])->name('daftar.bank');
 
 // PRODUCTS / PRODUK-
 Route::get('produk', [ProductController::class, 'index'])->name('products');
+Route::get('semua-produk', [ProductController::class, 'allProducts'])->name('all.products');
 Route::get('kategori-produk/{id}', [ProductController::class, 'productCategory'])->name('category');
 Route::get('pencarian', [ProductController::class, 'productSearch'])->name('pencarian');
 
@@ -56,6 +63,9 @@ Route::get('produk/{id}', [ProductDetailController::class, 'detail'])->name('pro
 Route::post('add-to-cart', [ProductDetailController::class, 'store'])->name('store.product');
 
 //DESIGN ONLINE
+Route::get('template/{id}', [ProductController::class, 'designCategory'])->name('template');
+Route::get('preview/{id}', [ProductDetailController::class, 'designTemplate'])->name('preview');
+
 Route::get('design-online', [EditorOnlineController::class, 'index'])->name('design.online');
 Route::get('get-design-online', [EditorOnlineController::class, 'getDesign'])->name('get.design');
 Route::post('set-design-online', [EditorOnlineController::class, 'setDesign'])->name('set.design');
@@ -101,6 +111,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('save-address', [ProfileController::class, 'saveAddress'])->name('save.address');
     Route::post('ajax/get-city', [ProfileController::class, 'ajaxGetCity']);
     Route::post('ajax/get-suburb', [ProfileController::class, 'ajaxGetSuburb']);
+    Route::post('ajax/get-suburb', [ProfileController::class, 'ajaxGetSuburb']);
+
+    Route::get('design-studio', [ProfileController::class, 'designStudio'])->name('design.studio');
 });
 
 // QUEUE ONLINE-

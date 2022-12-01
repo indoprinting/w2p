@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Checkout\CheckoutRequest;
+use App\Http\Resources\PostResource;
 use App\Models\Address\Address;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class CheckoutController extends Controller
 {
@@ -56,6 +60,7 @@ class CheckoutController extends Controller
 
         $total = Cart::where('id_customer', session('user_id_temp'))->sum('price');
         if ($total < 10000) return redirect()->route('cart')->with('error', 'Maaf, tidak bisa melanjutkan checkout, minimal belanja Rp 10.000,-');
+
         $outlet = $this->model_checkout->getOutlet();
         $data   = [
             'total'     => $total,
@@ -66,7 +71,6 @@ class CheckoutController extends Controller
             'gosend'    => $gosend ?? [],
             'raja_ongkir' => $ongkir ?? [],
         ];
-
         return view('checkout.index', $data);
     }
 
@@ -101,6 +105,43 @@ class CheckoutController extends Controller
         return redirect()->route('paymentPage', ['invoice' => $invoice, 'phone' => $phone]);
     }
 
+    public function store(Request $request)
+    {
+        $data = DB::table('idp_orders')->insert([
+            'no_inv'            => $request->input('no_inv'),
+            'cust_id'           => $request->input('cust_id'),
+            'cust_name'         => $request->input('cust_name'),
+            'address'           => $request->input('address'),
+            'total'             => $request->input('total'),
+            'items'             => $request->input('items'),
+            'pickup'            => $request->input('pickup'),
+            'cust_phone'        => $request->input('cust_phone'),
+            'cust_email'        => $request->input('cust_email'),
+            'pickup_method'     => $request->input('pickup_method'),
+            'payment_method'    => $request->input('payment_method'),
+            'url_track_order'   => $request->input('url_track_order'),
+            'sale_status'       => $request->input('sale_status'),
+            'cs'                => $request->input('cs'),
+            'created_at'        => $request->input('created_at'),
+            'updated_at'        => $request->input('updated_at')
+        ]);
+        $this->userFormDesign($request);
+
+        return response()->json($data);
+    }
+
+    public function userFormDesign($request)
+    {
+        $printerp           = Http::withOptions(['http_errors' => false])->baseUrl("https://printerp.indoprinting.co.id/api/v1/");
+        $cust_erp       = [
+            'name'      => Auth()->user()->name ?? $request->input('cust_name'),
+            'phone'     => Auth()->user()->phone ?? $request->input('cust_phone'),
+            'email'     => Auth()->user()->email ?? $request->input('cust_email'),
+            'company'   => '',
+        ];
+        $add_cust       = $printerp->asForm()->post("customers", $cust_erp);
+        return $add_cust->object();
+    }
 
     public function saleErp($req, $alamat_pickup, $data_cart)
     {

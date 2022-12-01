@@ -1,0 +1,123 @@
+[
+  {
+    "source": "https://indoprinting.co.id/editor-online/images/designs/indoprinting.png",
+    "title": "Logo Indoprinting",
+    "parameters": {
+      "zChangeable": true,
+      "left": 215,
+      "top": 200,
+      "colors": "#000000",
+      "removable": true,
+      "draggable": true,
+      "rotatable": true,
+      "resizable": true,
+      "boundingBox": "Base",
+      "autoCenter": true
+    }
+  },
+  {
+    "source": "https://indoprinting.co.id/editor-online/images/designs/gerobak1.png",
+    "title": "Icon Gerobak",
+    "parameters": {
+      "left": 215,
+      "top": 200,
+      "colors": "#000000",
+      "removable": true,
+      "draggable": true,
+      "rotatable": true,
+      "resizable": true,
+      "boundingBox": "Base",
+      "autoCenter": true
+    }
+  },
+  {
+    "source": "https://indoprinting.co.id/editor-online/images/designs/mie1.png",
+    "title": "Icon Mie",
+    "parameters": {
+      "left": 215,
+      "top": 200,
+      "colors": "#000000",
+      "removable": true,
+      "draggable": true,
+      "rotatable": true,
+      "resizable": true,
+      "boundingBox": "Base",
+      "autoCenter": true
+    }
+  },
+  {
+    "source": "https://indoprinting.co.id/editor-online/images/designs/mobil1.png",
+    "title": "Icon Mobil",
+    "parameters": {
+      "left": 215,
+      "top": 200,
+      "colors": "#000000",
+      "removable": true,
+      "draggable": true,
+      "rotatable": true,
+      "resizable": true,
+      "boundingBox": "Base",
+      "autoCenter": true
+    }
+  },
+  {
+    "source": "https://indoprinting.co.id/editor-online/images/designs/pohon1.png",
+    "title": "Icon Pohon Natal",
+    "parameters": {
+      "left": 215,
+      "top": 200,
+      "colors": "#000000",
+      "removable": true,
+      "draggable": true,
+      "rotatable": true,
+      "resizable": true,
+      "boundingBox": "Base",
+      "autoCenter": true
+    }
+  },
+  {
+    "source": "https://indoprinting.co.id/editor-online/images/designs/tiktok.png",
+    "title": "Logo Tiktok",
+    "parameters": {
+      "left": 215,
+      "top": 200,
+      "colors": "#000000",
+      "removable": true,
+      "draggable": true,
+      "rotatable": true,
+      "resizable": true,
+      "boundingBox": "Base",
+      "autoCenter": true
+    }
+  },
+  {
+    "source": "https://indoprinting.co.id/editor-online/images/designs/wa.png",
+    "title": "Logo WhatsApp",
+    "parameters": {
+      "left": 215,
+      "top": 200,
+      "colors": "#000000",
+      "removable": true,
+      "draggable": true,
+      "rotatable": true,
+      "resizable": true,
+      "boundingBox": "Base",
+      "autoCenter": true
+    }
+  },
+  {
+    "source": "https://indoprinting.co.id/editor-online/images/designs/yt.png",
+    "title": "Logo Youtube",
+    "parameters": {
+      "left": 215,
+      "top": 200,
+      "colors": "#000000",
+      "removable": true,
+      "draggable": true,
+      "rotatable": true,
+      "resizable": true,
+      "boundingBox": "Base",
+      "autoCenter": true
+    }
+  }
+]

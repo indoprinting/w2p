@@ -49,7 +49,7 @@
         </section>
     @else
         <div style="text-align:center;margin:auto;">
-            <h3>Keranjang kosong <i class="far fa-frown"></i></h3>
+            <h3>Keranjang kosong</h3>
             <div style="text-align: center;"><a href="{{ route('products') }}">Belanja sekarang</a></div>
         </div>
         @endif

@@ -33,7 +33,7 @@ class PrintERP extends Model
             'warehouse' => $request->outlet,
             'category'  => $request->service,
         ])->object();
-        
+
         if ($queue) {
             return $queue->error == 0 ? $queue->data : false;
         }
