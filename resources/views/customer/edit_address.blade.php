@@ -86,7 +86,7 @@ endif;
         </div>
     </form>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP-hGcct-nQS50RHHdXjwXgNxi71jRaU8&callback=initAutocomplete&libraries=places" async></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?= env('MAPS_KEY') ?>&callback=initAutocomplete&libraries=places" async></script>
 <script>
     window.lat_php = "<?= $coord[0] ? $coord[0] : -7.065076535253742 ?>";
     window.long_php = "<?= $coord[0] ? $coord[1] : 110.42755767388537 ?>";
