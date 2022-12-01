@@ -1,0 +1,57 @@
+[
+  [
+    {
+      "title": "Front",
+      "thumbnail": "/editor-online/products/images/kartu-nama.png",
+      "options": {
+        "stageWidth": "800",
+        "stageHeight": "800"
+    },
+      "elements": [
+        {
+          "title": "Base",
+          "source": "/editor-online/products/images/kartu-nama.png",
+          "type": "image",
+          "parameters": {
+            "left": 400,
+            "top": 300,
+            "originX": "center",
+            "originY": "center",
+            "z": -1,
+            "fill": false,
+            "colors": ["#b33939"],
+            "colorLinkGroup": "base",
+            "draggable": 0,
+            "rotatable": 0,
+            "resizable": 0,
+            "removable": 0,
+            "zChangeable": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "lockUniScaling": false,
+            "uniScalingUnlockable": 0,
+            "angle": 0,
+            "price": 0,
+            "autoCenter": false,
+            "replaceInAllViews": false,
+            "autoSelect": 0,
+            "topped": 0,
+            "boundingBoxMode": "inside",
+            "opacity": 1,
+            "excludeFromExport": false,
+            "locked": 0,
+            "showInColorSelection": false,
+            "boundingBox": false,
+            "resizeToW": 0,
+            "resizeToH": 0,
+            "filter": null,
+            "scaleMode": "fit",
+            "minScaleLimit": 0.01,
+            "advancedEditing": false,
+            "uploadZone": 0
+          }
+        }
+      ]
+    }
+]
+]

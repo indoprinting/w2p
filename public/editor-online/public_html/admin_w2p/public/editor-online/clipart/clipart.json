@@ -1,0 +1,231 @@
+[
+  {
+    "title": "Swirls",
+    "thumbnail": "/editor-online/clipart/images/swirl.png",
+    "designs": [
+      {
+        "source": "/editor-online/clipart/images/swirl.png",
+        "title": "Swirl",
+        "parameters": {
+          "zChangeable": true,
+          "left": 215,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "price": 10,
+          "boundingBox": "Base",
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/swirl2.png",
+        "title": "Swirl 2",
+        "parameters": {
+          "left": 215,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "price": 5,
+          "boundingBox": "Base",
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/swirl3.png",
+        "title": "Swirl 3",
+        "parameters": {
+          "left": 215,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/heart_blur.png",
+        "title": "Heart Blur",
+        "parameters": {
+          "left": 215,
+          "top": 200,
+          "colors": "#bf0200",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "price": 5,
+          "boundingBox": "Base",
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/converse.png",
+        "title": "Converse",
+        "parameters": {
+          "left": 215,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/crown.png",
+        "title": "Crown",
+        "parameters": {
+          "left": 215,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/men_women.png",
+        "title": "Men hits Women",
+        "parameters": {
+          "left": 215,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "boundingBox": "Base",
+          "autoCenter": true
+        }
+      }
+    ]
+  },
+  {
+    "title": "Retro",
+    "thumbnail": "/editor-online/clipart/images/retro_1.png",
+    "designs": [
+      {
+        "source": "/editor-online/clipart/images/retro_1.png",
+        "title": "Retro One",
+        "parameters": {
+          "left": 210,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "scale": 0.25,
+          "price": 7,
+          "boundingBox": "Base",
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/retro_2.png",
+        "title": "Retro Two",
+        "parameters": {
+          "left": 193,
+          "top": 180,
+          "colors": "#ffffff",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "scale": 0.46,
+          "boundingBox": "Base",
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/retro_3.png",
+        "title": "Retro Three",
+        "parameters": {
+          "left": 240,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "scale": 0.25,
+          "price": 8,
+          "boundingBox": "Base",
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/heart_circle.png",
+        "title": "Heart Circle",
+        "parameters": {
+          "left": 240,
+          "top": 200,
+          "colors": "#007D41",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "scale": 0.4,
+          "boundingBox": "Base",
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/swirl.png",
+        "title": "Swirl",
+        "parameters": {
+          "left": 215,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "price": 10,
+          "boundingBox": "Base",
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/swirl2.png",
+        "title": "Swirl 2",
+        "parameters": {
+          "left": 215,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true,
+          "price": 5,
+          "boundingBox": "Base",
+          "autoCenter": true
+        }
+      },
+      {
+        "source": "/editor-online/clipart/images/swirl3.png",
+        "title": "Swirl 3",
+        "parameters": {
+          "left": 215,
+          "top": 200,
+          "colors": "#000000",
+          "removable": true,
+          "draggable": true,
+          "rotatable": true,
+          "resizable": true
+        }
+      }
+    ]
+  }
+]
